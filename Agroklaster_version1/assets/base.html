@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+  body{
+  background-color: gray;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
+/*Changed default navbar CSS styling starts here*/
+.navbar{
+  color: #ffffff;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.navbar-default .navbar-brand{
+  color: #f9f9f9;
+}
+.navbar-default .navbar-nav li a{
+  color: #f9f9f9;
+}
+
+.navbar-default .navbar-nav .active a{
+  background-color: inherit;
+  border-bottom: 5px solid #f9f9f9;
+  color: #f9f9f9;
+}
+.navbar-default .navbar-nav .active a:hover{
+  background-color: inherit;
+  border-bottom: 5px solid #f9f9f9;
+  color: #f9f9f9;
+}
+.navbar-default .navbar-nav  a:hover{
+  background-color: inherit;
+  border-bottom: 5px solid #f9f9f9;
+  color: #f9f9f9;
+}
+.navbar-default .navbar-nav  a:active{
+  background-color: inherit;
+  border-bottom: 5px solid #f9f9f9;
+  color: #f9f9f9;
+}
+
+/*Content of the site CSS styling starts here*/
+.contentInfo{
+  height: 100vh;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  display: table;
+  padding: 0 7%;
+
+}
+  /*Header Section Css*/
+  #div1{
+    position: relative;
+    background-image: url('https://www.dropbox.com/s/d2l9ry2nxpuk7q7/pearblk.jpg?raw=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: teal;
+    color: white;
+    overflow: hidden;
+    margin: 0;
+		width: 100%;
+  }
+  #div1 h1{
+    font-size: 63px;
+  }
+  #div1 h3 {
+    font-size: 24px;
+    font-weight: lighter;
+  }
+  .containHead{
+    position: relative;
+    top: 140px;
+  }
+
+  .headButtons{
+    padding: 20px;
+    border: none;
+    margin-top:170px;
+  }
+
+  #helloButton{
+    font-weight: 200;
+    font-size: 1.5em;
+    padding: 5px 50px 5px 50px;
+    color: #fff;
+    background-color: rgba(255, 182, 193, 0.75);
+  }
+  #helloButton a{
+    text-decoration: none;
+    color: #fff;
+  }
+  #helloButton:hover{
+    background-color: rgba(219,112, 147, 0.75);
+    text-decoration: none;
+    color: #fff;
+  }
+  #workButton{
+    margin-left: 10px;
+    color: #666;
+    font-weight: lighter;
+    padding: 5px 50px 5px 50px;
+    font-size: 1.5em;
+    font-weight: 200;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  #workButton a{
+    text-decoration: none;
+    color: #666;
+  }
+  #workButton:hover{
+    background-color: rgba(238,233, 233, 0.75);
+    text-decoration: none;
+  }
+
+
+.sectionTitle{
+  margin-top: 60px;
+}
+
+  /*Work Section Css*/
+  #div2{
+    background-color: lightgrey;
+  }
+  .placeholder{
+    width: 370px;
+    height: 350px;
+    background-color: teal;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 1em;
+  }
+  .placeholder a, a:hover{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /*Hello Section Css*/
+  #div3{
+    background-color: pink;
+  }
+  .profileImg{
+    margin-top: 5px;
+		margin-bottom: 30px;
+  }
+  .profileImg img{
+    width: 450px;
+    height: 520px;
+  }
+  .profileText{
+    margin-top: 50px;
+    padding: 0;
+  }
+  .profileText p{
+    font-size: 1.5em;
+  }
+  .socialMedia{
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  .socialMedia img{
+    width: 40px;
+    height: 40px;
+    margin: 10px 0 0 10px;
+  }
+
+  /*Message & Footer Section Css*/
+  #div4{
+    background-color: lightgray;
+  }
+
+  footer {
+    padding: 1% 5%;
+    text-align: center;
+    background-color: #fff;
+    color: #666;
+  }
+    footer a{
+      color: #666;
+      text-decoration: none;
+    }
+.footLink {
+  text-decoration: none;
+  color: #666;
+}
+
+.footLink:hover{
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+
+</style>
+<body data-spy="scroll" data-target="#navbar-scroll">
+<!--Navbars-->
+<div id="navbar-scroll">
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+          <!--this is where the toggle begins-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+          <a href="#top" class="navbar-brand">Cayden Jacobs</a>
+
+      </div>
+          <!--All the nav links to be toggled-->
+      <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a class="nav-link" href="#div1">home</a></li>
+          <li><a class="nav-link" href="#div2">work</a></li>
+          <li><a class="nav-link" href="#div3">hello</a></li>
+          <li><a class="nav-link" href="#div4">message</a></li>
+        </ul>
+      </div>
+    </div>
+  </div><!--end navbar-->
+</div>
+
+
+
+
+      <div id="div1" class="container contentInfo text-center">
+        <div class="container containHead">
+          <h1 class="headerTitle">Hello! I'm Cayden</h1>
+          <h3 class="subTitle">I love different cuisines &amp; developing beautiful websites</h3>
+          <button id="helloButton" class="headButtons" type="button" name="details"><a href="#div3">details</a></button>
+          <button id="workButton" class="headButtons" type="button" name="work"> <a href="#div2">work</a></button>
+        </div>
+      </div>
+      <div id="div2" class="contentInfo">
+        <div class="sectionTitle text-center">
+          <h1>latest work</h1>
+        </div>
+        <div class="container portfolioWork">
+          <div class="row text-center">
+            <div class="col-lg-4">
+              <div class="placeholder ">
+                <a href="#"><img src="" alt="" />Apps</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="placeholder">
+                <a href="#"><img src="" alt="" />Websites</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="placeholder">
+                <a href="#"><img src="" alt="" />Software</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Hello Container Starts Here -->
+      <div id="div3" class="contentInfo">
+        <div class="sectionTitle text-center">
+          <h1>hello</h1>
+        </div>
+        <div class="container">
+          <div class="col-lg-6">
+            <div class="profileImg">
+            <img class="img-circle img-responsive" src="https://www.dropbox.com/s/wmczz29qxe7na6g/me.jpg?raw=1" />
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="profileText">
+              <p>East Coast-based Web Developer Cay is a keen observer driven by an innate curiosity and the desire to establish intimate connection with her subjects. Guided by her intuition rather than working with premeditated concepts, the silence and simplicity of her work explores notions of solitude and stillness in everyday moments. Distilled to their most essential form, her images are capable of expressing and evoking subtly nuanced emotions. </p> <p>This charismatic developer—when she’s not out being a foodie—can often be found updating her blog, informing her reader on her latest fashion finds and style ideas. A woman of many hats.</p>
+              <div class="socialMedia">
+                <a  href="https://www.twitter.com/cayferg" target="_blank"><img src="https://www.dropbox.com/s/2hjht79u5zjtlbc/Twitter128.png?raw=1" alt="twitter"  /></a>
+                <a href="http://www.behance.net/caydn" target="_blank"><img src="https://www.dropbox.com/s/ph83bazrhygyvpp/behance128-1.png?raw=1" alt="behance" /></a>
+                <a href="https://www.linkedin.com/in/caydn" target="_blank"><img src="https://www.dropbox.com/s/85elbt5dfiqxm04/LinkedIn128.png?raw=1" alt="linkedin"  /></a>
+								<a href="https://www.github.com/caydn" target="_blank"><img src="https://www.dropbox.com/s/69dzgq2fvkszx4o/github128-1.png?raw=1" alt="github"  /></a>
+                <a href="http://www.nrja.co" target="_blank"><img src="https://www.dropbox.com/s/kee4ckg96ocuh1o/NR128.png?raw=1" alt="blog" /></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Message Container Starts Here -->
+      <div id="div4" class="contentInfo">
+        <div class="sectionTitle text-center">
+          <h1>message</h1>
+        </div>
+        <form>
+          <fieldset class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Your Full Name"><br />
+          <fieldset class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <small class="text-muted">I'll never share your email with anyone else. Promise!</small>
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="subject">Subject</label>
+            <select class="form-control" id="Select">
+              <option>Select One</option>
+              <option>Just Saying Hello</option>
+              <option>Hire Me</option>
+              <option>Other, please explain in detail below</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="form-group">
+            <label for="Textarea">Comments/Details</label>
+            <textarea class="form-control" id="Textarea" rows="7"></textarea>
+          </fieldset>
+          <p class="text-muted">
+            Just curious. How did you hear about me?
+          </p>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              You're awesome &amp; you know more awesome people.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              Word of Mouth
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+              Social Media
+            </label>
+          </div>
+          <div class="radio ">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >
+              Web Search
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+      <footer>2016 &copy; made with heart by <a class="footLink" href="#">etchd ink digital design </a></footer>
+
+
+
+
+</body>
+<script>
+  (function ($) {
+  $(document).ready(function(){
+
+	// hide .navbar first
+	$(".navbar").hide();
+
+	// fade in .navbar
+	$(function () {
+		$(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+			if ($(this).scrollTop() >= 0) {
+				$('.navbar').fadeIn();
+			} else {
+				$('.navbar').fadeOut();
+			}
+		});
+
+
+	});
+
+});
+  }(jQuery));
+// below will control the scrollspy
+
+</script>
+</html>
